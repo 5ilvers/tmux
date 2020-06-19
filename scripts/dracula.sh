@@ -92,7 +92,7 @@ main()
 
     tmux set-option -ga status-right "#[fg=${white},bg=${gray}] %a %m/%d %R #(date +%Z) "
 
-    tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${gray}] #I #W "
+    tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${dark_purple}] #I #W "
 
     tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${gray}] #I #W "
 }
