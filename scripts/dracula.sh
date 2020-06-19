@@ -42,7 +42,7 @@ main()
     light_purple='#bd93f9'
 
 
-    left_icon=" ";;
+    left_icon="  "
 
     # start weather script in background
     if $show_weather; then
@@ -79,7 +79,7 @@ main()
     fi
 
     if $show_cpu_percentage; then
-        tmux set-option -ga status-right "#[fg=${black},bg=${orange}] #($current_dir/cpu_info.sh) "
+        tmux set-option -ga status-right "#[fg=${black},bg=${light_yellow}] #($current_dir/cpu_info.sh) "
     fi
 
     if $show_network; then # network
@@ -87,12 +87,12 @@ main()
     fi
 
     if $show_weather; then # weather
-        tmux set-option -ga status-right "#[fg=${black},bg=${orange}] #(cat $current_dir/../data/weather.txt) "
+        tmux set-option -ga status-right "#[fg=${black},bg=${light_yellow}] #(cat $current_dir/../data/weather.txt) "
     fi
 
-    tmux set-option -ga status-right "#[fg=${white},bg=${dark_purple}] %a %m/%d %R #(date +%Z) "
+    tmux set-option -ga status-right "#[fg=${white},bg=${gray}] %a %m/%d %R #(date +%Z) "
 
-    tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${dark_purple}] #I #W "
+    tmux set-window-option -g window-status-current-format "#[fg=${white},bg=${gray}] #I #W "
 
     tmux set-window-option -g window-status-format "#[fg=${white}]#[bg=${gray}] #I #W "
 }
