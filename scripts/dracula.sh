@@ -29,7 +29,7 @@ main()
     white='#ebdbb2'
     light_red='#fb4833'
     dark_red='#cc231c'
-    green='#989719'
+    green='#b8ba25'
     light_yellow='#fabc2e'
     dark_yellow='#d79920'
     blue='#448488'
